@@ -1,9 +1,3 @@
-" Settings for gvim and MacVim
-if has("gui_running")
-	:colorscheme evening
-	:set guifont=Monaco:h14
-endif
-
 " File-type options
 filetype plugin on
 filetype indent on
