@@ -20,3 +20,8 @@ set list
 
 " Display line numbers
 set number
+
+" NERDTree
+nnoremap <silent> <F5> :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\.o$', '\.a$', '\.bak$', '\~$']
+let NERDTreeWinPos='right'
