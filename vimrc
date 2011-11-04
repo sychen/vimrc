@@ -25,3 +25,9 @@ set number
 nnoremap <silent> <F5> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.o$', '\.a$', '\.bak$', '\~$']
 let NERDTreeWinPos='right'
+" Taglist
+nnoremap <silent> <F12> :TlistToggle<CR>
+let Tlist_Window_Exit_Only_Window = 1
+let Tlist_Show_One_File =1
+let Tlist_Auto_Highlight_Tag = 1
+
