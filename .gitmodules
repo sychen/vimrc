@@ -7,3 +7,6 @@
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/AnsiEsc"]
+	path = bundle/AnsiEsc
+	url = https://github.com/vim-scripts/AnsiEsc.vim.git
