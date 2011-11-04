@@ -1,3 +1,7 @@
+" Pathogen settings, which must come before file type detection
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 " File-type options
 filetype plugin on
 filetype indent on
