@@ -2,6 +2,7 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+
 " File-type options
 filetype plugin on
 filetype indent on
@@ -9,17 +10,33 @@ syntax on
 
 " Tab-settings
 " 4 spaces wide and auto tab->space
-
 set shiftwidth=4
 set tabstop=4
 set expandtab
+
+" Option 'softtabstop' emulates shorter tabs by inserting spaces.
+" For example: softtabstop=4
+" 1 tab  => ____
+" 2 tabs => (  tab )
+" 3 tabs => (  tab )____
+" This style, although maintaining compatiblity with 8-space tabs,
+" are extremely bad due to its mixing approach
+" Please do not use this option anyway!
+"set softtabstop=4
 
 " Coding style: highlight tabs and trailing spaces
 set listchars=tab:._,trail:!
 set list
 
-" Display line numbers
-set number
+set number              " Display line numbers
+set modeline            " Detect mode line
+set autochdir           " Change directory automatically
+
+" File encoding
+" set fileencodings=ucs-bom,utf-8,default,latin1 (default value)
+set fileencodings=utf-8,big5,gb2312,gb18030,gbk,ucs-bom,default
+" set encoding=utf-8 (default value)
+" set termencoding=utf-8 (default value)
 
 " NERDTree
 nnoremap <silent> <F5> :NERDTreeToggle<CR>
