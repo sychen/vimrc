@@ -60,3 +60,8 @@ let Tlist_Auto_Highlight_Tag = 1
 if has("gui_macvim")
     let TList_CTags_Cmd="/usr/local/bin/ctags"
 endif
+
+" Tagbar
+let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
+let g:tagbar_left = 1
+
