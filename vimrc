@@ -28,9 +28,24 @@ set expandtab
 set listchars=tab:._,trail:!
 set list
 
+" Highlight the search result
+set hlsearch
+
+" sychen(20110106): disable bells
+set visualbell t_vb=
+
+" Spell checking
+set spelllang=en
+set spell
+
+" Others
 set number              " Display line numbers
 set modeline            " Detect mode line
 set autochdir           " Change directory automatically
+
+set nowrap              " Do not wrap on long lines
+set smartcase           " Smarter search
+set pastetoggle=<F2>    " Insert mode <--> paste mode
 
 " File encoding
 " set fileencodings=ucs-bom,utf-8,default,latin1 (default value)
@@ -64,4 +79,16 @@ endif
 " Tagbar
 let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
 let g:tagbar_left = 1
+
+" ===============================
+" Per Language Settings
+" ===============================
+
+" Python
+let python_highlight_all = 1
+
+" XML
+let g:xml_syntax_folding = 1
+au FileType xml setlocal foldmethod=syntax
+
 
