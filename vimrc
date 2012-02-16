@@ -4,9 +4,27 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 " File-type options
+filetype on
 filetype plugin on
 filetype indent on
-syntax on
+
+" General Settings
+set nocompatible                " State this again for systems not setting this
+set backspace=2                 " Allow backspacing over everything in Insert mode
+set history=50                  " Keep 50 lines of ":" command history
+set ruler                       " Show the line and column number of the cursor position
+set number                      " Display line numbers
+set winaltkeys=no               " Do not enable Alt+* for GUI menus
+
+" Map leader
+let mapleader = ','
+let g:mapleader = ','
+
+" Highlighting stuff
+syntax on                       " Highlight for syntax
+set hlsearch                    " Highlight the search result
+set listchars=tab:._,trail:!    " Highlight tabs and trailing spaces
+set list
 
 " Tab-settings
 " 4 spaces wide and auto tab->space
@@ -24,13 +42,6 @@ set expandtab
 " Please do not use this option anyway!
 "set softtabstop=4
 
-" Coding style: highlight tabs and trailing spaces
-set listchars=tab:._,trail:!
-set list
-
-" Highlight the search result
-set hlsearch
-
 " sychen(20110106): disable bells
 set visualbell t_vb=
 
@@ -39,13 +50,26 @@ set spelllang=en
 set spell
 
 " Others
-set number              " Display line numbers
 set modeline            " Detect mode line
 set autochdir           " Change directory automatically
-
 set nowrap              " Do not wrap on long lines
 set smartcase           " Smarter search
 set pastetoggle=<F2>    " Insert mode <--> paste mode
+
+" Key mappings
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" Fast editing of the .vimrc file
+nmap <leader>e :e! ~/.vim/vimrc<cr>
+" When vimrc is edited, reload it
+autocmd! bufwritepost vimrc source ~/.vim/vimrc
+
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 " File encoding
 " set fileencodings=ucs-bom,utf-8,default,latin1 (default value)
