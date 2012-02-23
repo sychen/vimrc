@@ -13,3 +13,11 @@ Switch to the `~/.vim` directory, and fetch submodules:
     git submodule init
     git submodule update
 
+=======================================================
+Assistant Windows
+=======================================================
+
+ <F3>     <F4>       <F5>
+Tagbar             NerdTree
+      Grep&Quickfix
+

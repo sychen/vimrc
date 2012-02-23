@@ -282,6 +282,7 @@ endif
 if has("gui_macvim")
     let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
 endif
+nnoremap <silent> <F3> :TagbarToggle<CR>
 let g:tagbar_left = 1
 
 " Matchit
