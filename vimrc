@@ -54,9 +54,13 @@ set textwidth=120               " Always limit the width of text to 120
 
 set smartindent
 
-" Spell checking
-set spelllang=en
-set spell
+" Spell checking - only with GUI.
+"     Code with spell check enabled is annoying, a lot of red blocks
+"     But within GUIs errors are underlined and look great.
+if has("gui_running")
+    set spelllang=en
+    set spell
+endif
 
 " Omni-complete
 " /usr/dict/words does not exist anymore.
