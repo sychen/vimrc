@@ -139,10 +139,10 @@ map <C-l> <C-W>l
 " Browser-like tab browsing
 " =========================
 
-inoremap <a-n> <ESC>:tabnew
-nnoremap <a-n> <ESC>:tabnew
-vnoremap <a-n> <ESC>:tabnew
-cnoremap <a-n> <ESC>:tabnew
+inoremap <a-n> <ESC>:tabnew<CR>
+nnoremap <a-n> <ESC>:tabnew<CR>
+vnoremap <a-n> <ESC>:tabnew<CR>
+cnoremap <a-n> <ESC>:tabnew<CR>
 
 if has("gui_running") " Standalone VIM: we can use Alt-N
     inoremap <a-1> <ESC>1gt
