@@ -25,6 +25,7 @@ set listchars=tab:._,trail:!    " Highlight tabs and trailing spaces
 set list
 
 set cursorline                  " Highlight the line where the cursor is
+set t_Co=256                    " Enable 256 colors for better display
 
 " We should move these things to the colorscheme files ...
 " Tabline = the line with the label of the tabs in the text mode
