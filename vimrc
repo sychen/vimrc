@@ -279,12 +279,12 @@ let Tlist_Auto_Highlight_Tag = 1
 "       but different tools may require a different order.
 "       That is hard to maintain.
 
-if has("gui_macvim")
+if has("mac")
     let TList_CTags_Cmd="/usr/local/bin/ctags"
 endif
 
 " Tagbar
-if has("gui_macvim")
+if has("mac")
     let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
 endif
 nnoremap <silent> <F3> :TagbarToggle<CR>
