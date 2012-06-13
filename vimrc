@@ -253,7 +253,7 @@ set termencoding=utf-8      " Required in console (it's default in gtk2/macvim)
 
 " NERDTree
 nnoremap <silent> <F5> :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.o$', '\.a$', '\.bak$', '\~$']
+let NERDTreeIgnore=['\.o$', '\.a$', '\.bak$', '\~$', '\.pyc$']
 let NERDTreeWinPos='right'
 let NERDTreeShowBookmarks=1
 
