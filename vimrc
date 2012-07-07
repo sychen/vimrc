@@ -129,6 +129,14 @@ map <F7> :if has("syntax_items") <Bar> syntax off <CR>
          \else <Bar> syntax on <Bar> 
          \endif <CR>
 
+" Grep the word under the cursor
+" ==============================
+
+map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+map <S-F4> :execute "vimgrep /" . expand("<cword>") . "/j *" <Bar> cw<CR>
+
+
+
 " Move between windows
 " ====================
 map <C-j> <C-W>j
