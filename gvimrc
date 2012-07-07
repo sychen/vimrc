@@ -1,4 +1,4 @@
-colorscheme evening
+colorscheme ir_black
 set guifont=Monaco:h14
 set t_Co=256
 " 20111105: Merge the vimrc from my Gentoo workstation
