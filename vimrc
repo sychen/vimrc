@@ -300,11 +300,28 @@ if has("mac")
 endif
 
 " Tagbar
+" =======
+
 if has("mac")
     let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
 endif
 nnoremap <silent> <F3> :TagbarToggle<CR>
 let g:tagbar_left = 1
+
+" Tag support for `diff` output!
+
+" Required ctags settings (.ctags)
+" --langdef=diff
+" --langmap=diff:.diff.patch
+" --regex-diff=/^diff .* ([^ \t]+)$/\1/F,file/
+" --regex-diff=/^Index: ([^ \t]+)$/\1/F,file/
+
+let g:tagbar_type_diff = {
+    \ 'ctagstype': 'diff',
+    \ 'kind': [
+    \       'F:files'
+    \       ]
+    \ }
 
 " Matchit
 " =======
