@@ -77,7 +77,15 @@ set nowrap              " Do not wrap on long lines
 
 " Others
 set visualbell t_vb=    " sychen(20110106): disable bells
-set autochdir           " Change directory automatically
+
+" Old versions of VIM or invocations as vi
+" do not have "autochdir".
+" Setting it in these situations produces errors.
+" Because these rare usage is mostly single-documented,
+" disabling "autochdir" for them is fine.
+if exists("+autochdir")
+    set autochdir           " Change directory automatically
+endif
 set smartcase           " Smarter search
 set ignorecase
 set pastetoggle=<F2>    " Insert mode <--> paste mode
