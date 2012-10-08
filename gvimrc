@@ -20,6 +20,8 @@ if has("gui_gtk")
     " 20080713: VL Gothic is better for Latin alphabet.
     " set guifont=Bitstream\ Vera\ Sans\ Mono\ 12
     " set guifont=VL\ Gothic\ 12
-    set guifont=Droid\ Sans\ Mono\ 10
+    " set guifont=Droid\ Sans\ Mono\ 10
+    " 20121008: change to Source Code Pro
+    set guifont=Source\ Code\ Pro\ 12
 
 endif
