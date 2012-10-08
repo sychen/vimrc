@@ -116,13 +116,13 @@ nnoremap g* g*zz
 nnoremap g# g#zz
 
 " Ctrl-C becomes Esc
-map!  <ESC>
+noremap!  <ESC>
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nnoremap <leader>w :w!<cr>
 
 " Fast editing of the .vimrc file
-nmap <leader>e :e! ~/.vim/vimrc<cr>
+nnoremap <leader>e :e! ~/.vim/vimrc<cr>
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
@@ -130,27 +130,27 @@ autocmd! bufwritepost vimrc source ~/.vim/vimrc
 " ====================
 
 "toggle on/off highlightsearch
-map <F8> :set hls!<bar>set hls?<cr>
-map <F9> :set paste!<bar>set paste?<cr>
+noremap <F8> :set hls!<bar>set hls?<cr>
+noremap <F9> :set paste!<bar>set paste?<cr>
 " You can toggle the syntax on/off with this command
-map <F7> :if has("syntax_items") <Bar> syntax off <CR> 
+noremap <F7> :if has("syntax_items") <Bar> syntax off <CR> 
          \else <Bar> syntax on <Bar> 
          \endif <CR>
 
 " Grep the word under the cursor
 " ==============================
 
-map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
-map <S-F4> :execute "vimgrep /" . expand("<cword>") . "/j *" <Bar> cw<CR>
+noremap <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+noremap <S-F4> :execute "vimgrep /" . expand("<cword>") . "/j *" <Bar> cw<CR>
 
 
 
 " Move between windows
 " ====================
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-h> <C-W>h
+noremap <C-l> <C-W>l
 
 " Browser-like tab browsing
 " =========================
@@ -246,7 +246,7 @@ endif
 
 " Show syntax highlighting groups for word under cursor
 " =====================================================
-nmap <leader>z :call <SID>SynStack()<CR>
+nnoremap <leader>z :call <SID>SynStack()<CR>
 function! <SID>SynStack()
   if !exists("*synstack")
     return
