@@ -61,3 +61,6 @@
 [submodule "bundle/systemverilog.vim"]
 	path = bundle/systemverilog.vim
 	url = https://github.com/sychen/systemverilog.vim.git
+[submodule "bundle/systemverilog"]
+	path = bundle/systemverilog
+	url = https://github.com/sychen/systemverilog.vim.git
