@@ -64,3 +64,6 @@
 [submodule "bundle/systemverilog"]
 	path = bundle/systemverilog
 	url = https://github.com/sychen/systemverilog.vim.git
+[submodule "bundle/vim-css-color"]
+	path = bundle/vim-css-color
+	url = https://github.com/ap/vim-css-color.git
