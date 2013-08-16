@@ -25,3 +25,8 @@ if has("gui_gtk")
     set guifont=Source\ Code\ Pro\ 12
 
 endif
+
+if filereadable($HOME . "/.vim/gvimrc-local")
+    source $HOME/.vim/gvimrc-local
+endif
+
