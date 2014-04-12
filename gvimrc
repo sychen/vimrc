@@ -26,6 +26,15 @@ if has("gui_gtk")
 
 endif
 
+" Git Gutter
+" ==========
+
+highlight SignColumn            guibg=black
+highlight GitGutterAdd          guifg=lightgreen guibg=black
+highlight GitGutterChange       guifg=lightyellow guibg=black
+highlight GitGutterDelete       guifg=lightred guibg=black
+highlight GitGutterChangeDelete guifg=lightblue guibg=black
+
 if filereadable($HOME . "/.vim/gvimrc-local")
     source $HOME/.vim/gvimrc-local
 endif
