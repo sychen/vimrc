@@ -1,6 +1,6 @@
 " Pathogen settings, which must come before file type detection
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#incubate()
+call pathogen#infect('bundle/{}')
 call pathogen#helptags()
 
 " File-type options
