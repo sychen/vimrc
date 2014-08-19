@@ -140,10 +140,11 @@ noremap <F7> :if has("syntax_items") <Bar> syntax off <CR>
 " Grep the word under the cursor
 " ==============================
 
-noremap <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
-noremap <S-F4> :execute "vimgrep /" . expand("<cword>") . "/j *" <Bar> cw<CR>
+" noremap <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+" noremap <S-F4> :execute "vimgrep /" . expand("<cword>") . "/j *" <Bar> cw<CR>
 
-
+noremap <F4> :Ack <cword><CR>
+noremap <S-F4> :Ack <cword><CR>
 
 " Move between windows
 " ====================
@@ -333,6 +334,12 @@ source $VIMRUNTIME/macros/matchit.vim
 
 let g:solarized_contrast = "high"
 let g:solarized_visibility = "high"
+
+" Ack
+" ===
+
+let g:ackhighlight = 1
+" let g:ack_autofold_results = 1
 
 " ===============================
 " Per Language Settings
