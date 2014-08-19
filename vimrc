@@ -328,6 +328,12 @@ let g:tagbar_type_diff = {
 
 source $VIMRUNTIME/macros/matchit.vim
 
+" Solarized
+" =========
+
+let g:solarized_contrast = "high"
+let g:solarized_visibility = "high"
+
 " ===============================
 " Per Language Settings
 " ===============================

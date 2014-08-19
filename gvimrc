@@ -13,7 +13,8 @@ if has("gui_gtk")
     " colorscheme evening
     " colorscheme desert
     set background=dark
-    colorscheme ir_black
+    " colorscheme ir_black
+    colorscheme solarized
 
     " Font
 
