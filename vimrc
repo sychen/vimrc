@@ -71,6 +71,7 @@ endif
 
 " Vim Appearance
 set modeline            " Detect mode line
+set modelines=5         " Default value, but on some systems it is off (0).
 set ruler               " Show the line and column number of the cursor position
 set number              " Display line numbers
 set nowrap              " Do not wrap on long lines
