@@ -1,5 +1,9 @@
-colorscheme ir_black
-set guifont=Monaco:h14
+"colorscheme ir_black
+colorscheme solarized
+set background=dark
+set guifont=InputMono\ Thin:h14
+
+" set guifont=Monaco:h14
 set t_Co=256
 " 20111105: Merge the vimrc from my Gentoo workstation
 if has("gui_gtk")
