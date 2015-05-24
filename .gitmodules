@@ -94,3 +94,15 @@
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = https://github.com/tpope/vim-rails.git
+[submodule "bundle/vim-HiLinkTrace"]
+	path = bundle/vim-HiLinkTrace
+	url = https://github.com/gerw/vim-HiLinkTrace.git
+[submodule "bundle/vim-diff-enhanced"]
+	path = bundle/vim-diff-enhanced
+	url = https://github.com/chrisbra/vim-diff-enhanced.git
+[submodule "bundle/ColumnTags.vim"]
+	path = bundle/ColumnTags.vim
+	url = git://github.com/kbairak/ColumnTags.vim.git
+[submodule "bundle/vim-jsx"]
+	path = bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
