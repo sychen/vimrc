@@ -1,1 +1,6 @@
+# Document tags
 tags
+# Browser History
+.netrwhist
+# Vim Sessions
+sessions
