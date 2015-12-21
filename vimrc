@@ -161,94 +161,51 @@ noremap <C-l> <C-W>l
 " Browser-like tab browsing
 " =========================
 
-inoremap <a-n> <ESC>:tabnew<CR>
-nnoremap <a-n> <ESC>:tabnew<CR>
-vnoremap <a-n> <ESC>:tabnew<CR>
-cnoremap <a-n> <ESC>:tabnew<CR>
+" New Tab
 
-if has("gui_running") " Standalone VIM: we can use Alt-N
-    inoremap <a-1> <ESC>1gt
-    inoremap <a-2> <ESC>2gt
-    inoremap <a-3> <ESC>3gt
-    inoremap <a-4> <ESC>4gt
-    inoremap <a-5> <ESC>5gt
-    inoremap <a-6> <ESC>6gt
-    inoremap <a-7> <ESC>7gt
-    inoremap <a-8> <ESC>8gt
-    inoremap <a-9> <ESC>9gt
-    inoremap <a-0> <ESC>10gt
-    nnoremap <a-1> <ESC>1gt
-    nnoremap <a-2> <ESC>2gt
-    nnoremap <a-3> <ESC>3gt
-    nnoremap <a-4> <ESC>4gt
-    nnoremap <a-5> <ESC>5gt
-    nnoremap <a-6> <ESC>6gt
-    nnoremap <a-7> <ESC>7gt
-    nnoremap <a-8> <ESC>8gt
-    nnoremap <a-9> <ESC>9gt
-    nnoremap <a-0> <ESC>10gt
-    vnoremap <a-1> <ESC>1gt
-    vnoremap <a-2> <ESC>2gt
-    vnoremap <a-3> <ESC>3gt
-    vnoremap <a-4> <ESC>4gt
-    vnoremap <a-5> <ESC>5gt
-    vnoremap <a-6> <ESC>6gt
-    vnoremap <a-7> <ESC>7gt
-    vnoremap <a-8> <ESC>8gt
-    vnoremap <a-9> <ESC>9gt
-    vnoremap <a-0> <ESC>10gt
-    cnoremap <a-1> <ESC>1gt
-    cnoremap <a-2> <ESC>2gt
-    cnoremap <a-3> <ESC>3gt
-    cnoremap <a-4> <ESC>4gt
-    cnoremap <a-5> <ESC>5gt
-    cnoremap <a-6> <ESC>6gt
-    cnoremap <a-7> <ESC>7gt
-    cnoremap <a-8> <ESC>8gt
-    cnoremap <a-9> <ESC>9gt
-    cnoremap <a-0> <ESC>10gt
-else                        " Inside a terminal, alt-N may be used, use ctrl-n instead
-    inoremap <c-1> <ESC>1gt
-    inoremap <c-2> <ESC>2gt
-    inoremap <c-3> <ESC>3gt
-    inoremap <c-4> <ESC>4gt
-    inoremap <c-5> <ESC>5gt
-    inoremap <c-6> <ESC>6gt
-    inoremap <c-7> <ESC>7gt
-    inoremap <c-8> <ESC>8gt
-    inoremap <c-9> <ESC>9gt
-    inoremap <c-0> <ESC>10gt
-    nnoremap <c-1> <ESC>1gt
-    nnoremap <c-2> <ESC>2gt
-    nnoremap <c-3> <ESC>3gt
-    nnoremap <c-4> <ESC>4gt
-    nnoremap <c-5> <ESC>5gt
-    nnoremap <c-6> <ESC>6gt
-    nnoremap <c-7> <ESC>7gt
-    nnoremap <c-8> <ESC>8gt
-    nnoremap <c-9> <ESC>9gt
-    nnoremap <c-0> <ESC>10gt
-    vnoremap <c-1> <ESC>1gt
-    vnoremap <c-2> <ESC>2gt
-    vnoremap <c-3> <ESC>3gt
-    vnoremap <c-4> <ESC>4gt
-    vnoremap <c-5> <ESC>5gt
-    vnoremap <c-6> <ESC>6gt
-    vnoremap <c-7> <ESC>7gt
-    vnoremap <c-8> <ESC>8gt
-    vnoremap <c-9> <ESC>9gt
-    vnoremap <c-0> <ESC>10gt
-    cnoremap <c-1> <ESC>1gt
-    cnoremap <c-2> <ESC>2gt
-    cnoremap <c-3> <ESC>3gt
-    cnoremap <c-4> <ESC>4gt
-    cnoremap <c-5> <ESC>5gt
-    cnoremap <c-6> <ESC>6gt
-    cnoremap <c-7> <ESC>7gt
-    cnoremap <c-8> <ESC>8gt
-    cnoremap <c-9> <ESC>9gt
-    cnoremap <c-0> <ESC>10gt
+if has("gui_running")
+    if has("gui_macvim") " MacVim already has this
+    else " Other GUI: Alt
+        inoremap <A-n> <ESC>:tabnew<CR>
+        nnoremap <A-n> <ESC>:tabnew<CR>
+        vnoremap <A-n> <ESC>:tabnew<CR>
+        cnoremap <A-n> <ESC>:tabnew<CR>
+    endif
+else
+    inoremap <leader>n <ESC>:tabnew<CR>
+    nnoremap <leader>n <ESC>:tabnew<CR>
+    vnoremap <leader>n <ESC>:tabnew<CR>
+    cnoremap <leader>n <ESC>:tabnew<CR>
 endif
+
+" Numbered Tab
+
+let i = 1
+while i <= 10
+    let key = i % 10
+    if has("gui_running")
+        if has("gui_macvim") " MacVim: Command
+            execute "inoremap <D-".key."> <ESC>".i."gt<CR>"
+            execute "nnoremap <D-".key."> <ESC>".i."gt<CR>"
+            execute "vnoremap <D-".key."> <ESC>".i."gt<CR>"
+            execute "cnoremap <D-".key."> <ESC>".i."gt<CR>"
+        else " Other GUI: Alt
+            execute "inoremap <A-".key."> <ESC>".i."gt<CR>"
+            execute "nnoremap <A-".key."> <ESC>".i."gt<CR>"
+            execute "vnoremap <A-".key."> <ESC>".i."gt<CR>"
+            execute "cnoremap <A-".key."> <ESC>".i."gt<CR>"
+        endif
+    else " Terminal: leader
+        " Support for Ctrl, Alt-Shift, Command plus number key in terminals
+        " such as iTerm, gnome-terminal, and Konsole is a daunting and tedious work.
+        " Let's use the leader key instead
+        execute "inoremap <leader>".key." <ESC>".i."gt<CR>"
+        execute "nnoremap <leader>".key." <ESC>".i."gt<CR>"
+        execute "vnoremap <leader>".key." <ESC>".i."gt<CR>"
+        execute "cnoremap <leader>".key." <ESC>".i."gt<CR>"
+    endif
+    let i+=1
+endwhile
 
 " Show syntax highlighting groups for word under cursor
 " =====================================================
