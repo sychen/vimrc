@@ -76,6 +76,10 @@ set ruler               " Show the line and column number of the cursor position
 set number              " Display line numbers
 set nowrap              " Do not wrap on long lines
 
+if has("patch-7.4.338")
+    set breakindent
+endif
+
 " Others
 set visualbell t_vb=    " sychen(20110106): disable bells
 
