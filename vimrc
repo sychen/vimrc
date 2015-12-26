@@ -77,6 +77,8 @@ set ruler               " Show the line and column number of the cursor position
 set number              " Display line numbers
 set nowrap              " Do not wrap on long lines
 
+set wildmenu            " Display candidates on the ex line
+
 if has("patch-7.4.338")
     set breakindent
 endif
