@@ -37,9 +37,6 @@
 [submodule "bundle/vim-localrc"]
 	path = bundle/vim-localrc
 	url = https://github.com/sychen/vim-localrc.git
-[submodule "bundle/wikipedia"]
-	path = bundle/wikipedia
-	url = git://github.com/vim-scripts/wikipedia.vim.git
 [submodule "bundle/vim-visual-star-search"]
 	path = bundle/vim-visual-star-search
 	url = git://github.com/nelstrom/vim-visual-star-search.git
