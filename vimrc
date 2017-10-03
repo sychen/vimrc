@@ -1,7 +1,13 @@
-" Pathogen settings, which must come before file type detection
+" Sung-Yu Chen's vimrc
+
+" Performance Profiling
+" :profile start profile.log
+" :profile func *
+" :profile file *
+
+" Pathogen settings must come before file type detection
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect('bundle/{}')
-call pathogen#infect('local/{}')
+call pathogen#infect('bundle/{}', 'local/{}')
 call pathogen#helptags()
 
 " File-type options
@@ -15,11 +21,14 @@ set backspace=2                 " Allow backspacing over everything in Insert mo
 set history=50                  " Keep 50 lines of ":" command history
 set winaltkeys=no               " Do not enable Alt+* for GUI menus
 
-" Map leader
+" Leader key
+"    Leader key is like those keys used in hot key combination, such as Ctrl, Alt, Shift, Command.
+"    For example, we may be used to use Alt-1~9 in Firefox,
+"    and we can assign <Leader>1~9 in Vim to switch tabs.
 let mapleader = ','
 let g:mapleader = ','
 
-" Highlighting stuff
+" Highlighting
 syntax on                       " Highlight for syntax
 set hlsearch                    " Highlight the search result
 set listchars=tab:._,trail:!    " Highlight tabs and trailing spaces
@@ -28,11 +37,14 @@ set list
 set cursorline                  " Highlight the line where the cursor is
 set t_Co=256                    " Enable 256 colors for better display
 
-" We should move these things to the colorscheme files ...
-" Tabline = the line with the label of the tabs in the text mode
-hi tabline ctermfg=black ctermbg=gray
-hi tablinesel ctermfg=white ctermbg=black
-hi search ctermfg=Black ctermbg=Yellow gui=bold guifg=Black guibg=Red
+" Manually set highlighting for UI elements
+"   It should be moved to the colorscheme files.
+highlight search        ctermfg=Black ctermbg=Yellow gui=bold guifg=Black guibg=Red
+" Tabline: In text mode, the label of the tabs are displayed on the top line.
+"          We call this line the tabline, its highlight group is tabline.
+"          The highlighting group of the label of the active tab is tablinesel.
+highlight tabline       ctermfg=black ctermbg=gray
+highlight tablinesel    ctermfg=white ctermbg=black
 
 " Tab, indent, and wrapping
 " 4 spaces wide and auto tab->space
@@ -58,6 +70,9 @@ set smartindent
 " Spell checking - only with GUI.
 "     Code with spell check enabled is annoying, a lot of red blocks
 "     But within GUIs errors are underlined and look great.
+" Keys:
+"       zg Learn the spelling of the word under the cursor
+"       z= Suggest the spelling of the word under the cursor
 if has("gui_running")
     set spelllang=en
     set spell
@@ -86,6 +101,12 @@ endif
 " Others
 set visualbell t_vb=    " sychen(20110106): disable bells
 
+" We have to do this check, because some programs
+" always use an older version of Vim, which does not have this feature.
+" Their launch scripts reset the environment,
+" therefore editor-related variables, such as $EDITOR, $SVN_EDITOR,
+" will not survive the program.
+
 " Old versions of VIM or invocations as vi
 " do not have "autochdir".
 " Setting it in these situations produces errors.
@@ -100,8 +121,12 @@ set pastetoggle=<F2>    " Insert mode <--> paste mode
 
 set backup
 set backupext=.bak
+set backupdir=~/.vim-backup
 
 set shell=/bin/sh       " Prevent from breakage if tcsh is used
+
+set wildignore+=*.o,*.obj,*.bak,*.pyc,*/.git/*,*/.hg/*,*/.svn/*
+
 
 " ===================================
 " Key mappings
@@ -125,6 +150,13 @@ nnoremap g# g#zz
 
 " Ctrl-C becomes Esc
 noremap!  <ESC>
+
+" Better "gf"
+
+" nnoremap <leader>vsgf :vs<cr>gf
+" nnoremap <leader>spgf :sp<cr>gf
+nnoremap <leader>v :vs<cr>
+nnoremap <leader>s :sp<cr>
 
 " Fast saving
 nnoremap <leader>w :w!<cr>
@@ -289,6 +321,15 @@ let g:tagbar_type_diff = {
     \       ]
     \ }
 
+" Git Gutter
+" ==========
+
+highlight SignColumn            guibg=black
+highlight GitGutterAdd          guifg=lightgreen guibg=black
+highlight GitGutterChange       guifg=lightyellow guibg=black
+highlight GitGutterDelete       guifg=lightred guibg=black
+highlight GitGutterChangeDelete guifg=lightblue guibg=black
+
 " Matchit
 " =======
 
@@ -306,6 +347,11 @@ let g:solarized_visibility = "high"
 let g:ackhighlight = 1
 " let g:ack_autofold_results = 1
 
+" EasyAlign
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
 " ===============================
 " Per Language Settings
 " ===============================
@@ -321,10 +367,10 @@ au FileType xml setlocal foldmethod=syntax
 au!  BufEnter   *.vh        set filetype=verilog
 au BufReadPost * if exists("b:current_syntax")
 au BufReadPost *   if b:current_syntax == "verilog"
-au BufReadPost *     let c_comment_strings = 1
-au BufReadPost *     let verilog_no_bracket_error = 0
-au BufReadPost *     let verilog_minlines = 200
-au BufReadPost *     let verilog_no_force_sync = 1
+" au BufReadPost *     let c_comment_strings = 1
+" au BufReadPost *     let verilog_no_bracket_error = 0
+" au BufReadPost *     let verilog_minlines = 200
+" au BufReadPost *     let verilog_no_force_sync = 1
 au BufReadPost *     let b:verilog_indent_verbose = 1
 au BufReadPost *     let b:verilog_indent_width = 4
 au BufReadPost *   endif
