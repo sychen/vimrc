@@ -112,3 +112,15 @@
 [submodule "bundle/unite.vim"]
 	path = bundle/unite.vim
 	url = https://github.com/Shougo/unite.vim.git
+[submodule "bundle/vim-flake8"]
+	path = bundle/vim-flake8
+	url = https://github.com/nvie/vim-flake8.git
+[submodule "bundle/Vim-Jinja2-Syntax"]
+	path = bundle/Vim-Jinja2-Syntax
+	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
+[submodule "bundle/vim-systemverilog"]
+	path = bundle/vim-systemverilog
+	url = https://github.com/sychen/vim-systemverilog
+[submodule "bundle/vim-material"]
+	path = bundle/vim-material
+	url = https://github.com/hzchirs/vim-material.git
