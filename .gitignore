@@ -2,5 +2,10 @@
 tags
 # Browser History
 .netrwhist
+# Spell Records
+spell
 # Vim Sessions
 sessions
+# Local Settings
+vimrc-local
+local
