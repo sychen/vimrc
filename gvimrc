@@ -1,7 +1,7 @@
 " Graphical VIM (gvim, mvim)
 
 
-set t_Co=256  " 256-color support
+" set t_Co=256  " 256-color support
 
 amenu Style.Expand\ Tabs\ To\ 4\ Spaces :%s/	/    /g<CR>
 amenu Style.Strip\ Trailing\ Spaces :%s/  *$//g<CR>
