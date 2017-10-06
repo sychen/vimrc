@@ -31,9 +31,6 @@
 [submodule "bundle/sessionman"]
 	path = bundle/sessionman
 	url = https://github.com/vim-scripts/sessionman.vim.git
-[submodule "bundle/applescript"]
-	path = bundle/applescript
-	url = https://github.com/vim-scripts/applescript.vim.git
 [submodule "bundle/vim-localrc"]
 	path = bundle/vim-localrc
 	url = https://github.com/sychen/vim-localrc.git
