@@ -333,13 +333,13 @@ highlight GitGutterChangeDelete guifg=lightblue guibg=black
 " Matchit
 " =======
 
-source $VIMRUNTIME/macros/matchit.vim
+" source $VIMRUNTIME/macros/matchit.vim
 
 " Solarized
 " =========
 
-let g:solarized_contrast = "high"
-let g:solarized_visibility = "high"
+" let g:solarized_contrast = "high"
+" let g:solarized_visibility = "high"
 
 " Ack
 " ===
