@@ -130,3 +130,6 @@
 [submodule "bundle/vim-better-whitespace"]
 	path = bundle/vim-better-whitespace
 	url = https://github.com/ntpeters/vim-better-whitespace.git
+[submodule "bundle/ir_black"]
+	path = bundle/ir_black
+	url = https://github.com/twerth/ir_black.git
