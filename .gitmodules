@@ -82,9 +82,6 @@
 [submodule "bundle/vim-polyglot"]
 	path = bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
-[submodule "bundle/vim-go"]
-	path = bundle/vim-go
-	url = https://github.com/fatih/vim-go.git
 [submodule "bundle/vim-flake8"]
 	path = bundle/vim-flake8
 	url = https://github.com/nvie/vim-flake8.git
