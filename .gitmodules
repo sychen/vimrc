@@ -124,3 +124,9 @@
 [submodule "bundle/vim-material"]
 	path = bundle/vim-material
 	url = https://github.com/hzchirs/vim-material.git
+[submodule "bundle/indentLine"]
+	path = bundle/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule "bundle/vim-better-whitespace"]
+	path = bundle/vim-better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace.git
