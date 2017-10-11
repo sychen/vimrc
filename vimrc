@@ -261,9 +261,13 @@ set termencoding=utf-8      " Required in console (it's default in gtk2/macvim)
 
 " NERDTree
 nnoremap <silent> <F5> :NERDTreeToggle<CR>
+" Also supports leader key
+nnoremap <silent> <leader>e :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.o$', '\.a$', '\.bak$', '\~$', '\.pyc$']
 let NERDTreeWinPos='right'
 let NERDTreeShowBookmarks=1
+let NERDTreeMouseMode=2  " single click to expand directories
+let NERDTreeQuitOnOpen=1  " exit window after opening
 
 " Disable NERDTreeDirArrows in Linux, because the font
 " does not have the arrow symbol
