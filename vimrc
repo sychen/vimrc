@@ -285,7 +285,10 @@ if has("mac")
     let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
 endif
 nnoremap <silent> <F3> :TagbarToggle<CR>
+"Also supports leader key
+nnoremap <silent> <leader>T :TagbarToggle<CR>
 let g:tagbar_left = 1
+let g:tagbar_autoclose = 1
 
 " Tag support for `diff` output!
 
