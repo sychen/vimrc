@@ -305,6 +305,15 @@ let g:tagbar_type_diff = {
     \       ]
     \ }
 
+" Buffergator
+" ===========
+
+" Disable default key mapping
+let g:buffergator_suppress_keymaps = 1
+" Selected key mapping
+nnoremap <silent> <Leader>b :BuffergatorOpen<CR>
+nnoremap <silent> <Leader>t :BuffergatorTabsOpen<CR>
+
 " Git Gutter
 " ==========
 
