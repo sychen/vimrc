@@ -27,8 +27,9 @@ endif
 " 20111105: Merge the vimrc from my Gentoo workstation
 if has("gui_gtk")
 
-    set guioptions-=T  " Do not include toolbar
-    set guioptions+=b  " Bottom (horizontal) scrollbar is present
+    " GUI components
+    set guioptions-=T " Do not include toolbar
+    set guioptions+=b " Bottom (horizontal) scrollbar is present
 
     " Color scheme
     set background=dark
@@ -51,7 +52,6 @@ if has("gui_gtk")
     "set guifont=Source\ Code\ Pro\ 12
 
 endif
-
 
 " Local gvimrc settings
 " =====================
