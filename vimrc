@@ -274,23 +274,6 @@ if has("unix")
     endif
 endif
 
-" Taglist
-" nnoremap <silent> <F12> :TlistToggle<CR>
-" let Tlist_Window_Exit_Only_Window = 1
-" let Tlist_Show_One_File =1
-" let Tlist_Auto_Highlight_Tag = 1
-
-" The system default "ctags" is not compatible with taglist.
-" Use homebrew to install a latest version of ctags
-" And use the lines below to locate the executable.
-" NOTE: Adjusting ordering of elements in $PATH is a way to do,
-"       but different tools may require a different order.
-"       That is hard to maintain.
-
-if has("mac")
-    let TList_CTags_Cmd="/usr/local/bin/ctags"
-endif
-
 " Tagbar
 " =======
 
