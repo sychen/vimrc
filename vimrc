@@ -5,7 +5,8 @@
 " :profile func *
 " :profile file *
 
-" Pathogen settings must come before file type detection
+" Pathogen - Vim module management
+" its settings must come before file type detection
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect('bundle/{}', 'local/{}')
 call pathogen#helptags()
@@ -95,17 +96,19 @@ set nowrap              " Do not wrap on long lines
 set wildmenu            " Display candidates on the ex line
 
 if has("patch-7.4.338")
-    set breakindent
+    set breakindent         " Wrapped lines are indented as the main line
 endif
 
 " Others
 set visualbell t_vb=    " sychen(20110106): disable bells
 
-" We have to do this check, because some programs
-" always use an older version of Vim, which does not have this feature.
+" We have to do this check, because some programs (e.g. Subversion)
+" always uses an older version of Vim, which does not have this feature.
 " Their launch scripts reset the environment,
 " therefore editor-related variables, such as $EDITOR, $SVN_EDITOR,
 " will not survive the program.
+" Therefore, setting $EDITOR, $SVN_EDITOR,
+" and even ~/.subversion/config does not work.
 
 " Old versions of VIM or invocations as vi
 " do not have "autochdir".
