@@ -166,19 +166,10 @@ nnoremap <leader>w :w!<cr>
 
 " Fast editing of the .vimrc file
 nnoremap <leader>e :e! ~/.vim/vimrc<cr>
+
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
-" Team vimrc
-" ====================
-
-"toggle on/off highlightsearch
-noremap <F8> :set hls!<bar>set hls?<cr>
-noremap <F9> :set paste!<bar>set paste?<cr>
-" You can toggle the syntax on/off with this command
-noremap <F7> :if has("syntax_items") <Bar> syntax off <CR> 
-         \else <Bar> syntax on <Bar> 
-         \endif <CR>
 
 " Grep the word under the cursor
 " ==============================
