@@ -85,12 +85,6 @@
 [submodule "bundle/Vim-Jinja2-Syntax"]
 	path = bundle/Vim-Jinja2-Syntax
 	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
-[submodule "bundle/vim-systemverilog"]
-	path = bundle/vim-systemverilog
-	url = https://github.com/sychen/vim-systemverilog
-[submodule "bundle/vim-material"]
-	path = bundle/vim-material
-	url = https://github.com/hzchirs/vim-material.git
 [submodule "bundle/indentLine"]
 	path = bundle/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
@@ -100,3 +94,9 @@
 [submodule "bundle/ir_black"]
 	path = bundle/ir_black
 	url = https://github.com/twerth/ir_black.git
+[submodule "bundle/vim-material"]
+	path = bundle/vim-material
+	url = https://github.com/sychen/vim-material.git
+[submodule "bundle/vim-systemverilog"]
+	path = bundle/vim-systemverilog
+	url = https://github.com/sychen/vim-systemverilog.git
