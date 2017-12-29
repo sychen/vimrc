@@ -33,7 +33,7 @@ if has("gui_gtk")
 
     " Color scheme
     set background=dark
-    colorscheme solarized
+    colorscheme vim-material
 
     " 20080713: I like evening now.
     " colorscheme evening
@@ -41,8 +41,8 @@ if has("gui_gtk")
     " colorscheme ir_black
 
     " Font
-    set guifont=Input\ Mono\ Thin\ 10
-    amenu Platform.Small\ Font\ Mode :set guifont=Input\ Mono\ Thin\ 8<CR>
+    set guifont=Fira\ Code\ 10
+    amenu Platform.Small\ Font\ Mode :set guifont=Fira\ Code\ 8<CR>
 
     " 20080713: VL Gothic is better for Latin alphabet.
     " set guifont=Bitstream\ Vera\ Sans\ Mono\ 12
