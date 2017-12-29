@@ -371,9 +371,9 @@ au BufReadPost * endif
 
 " C/C++
 au FileType c set formatoptions=croql cindent shiftwidth=4
-au FileType c set cinoptions={.5s,:.5s,+.5s,t0,g0,^-2,e-2,n-2,p2s,(0,=.5s 
+au FileType c set cinoptions={.5s,:.5s,+.5s,t0,g0,^-2,e-2,n-2,p2s,(0,=.5s
 au FileType cpp set formatoptions=croql cindent shiftwidth=4
-au FileType cpp set cinoptions={.5s,:.5s,+.5s,t0,g0,^-2,e-2,n-2,p2s,(0,=.5s 
+au FileType cpp set cinoptions={.5s,:.5s,+.5s,t0,g0,^-2,e-2,n-2,p2s,(0,=.5s
 
 " ===============================
 " Per Host Settings
