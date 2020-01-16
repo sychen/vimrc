@@ -11,7 +11,7 @@ if has("gui_macvim")
     set background=dark
 
     set macligatures
-    set guifont=Fira\ Code:h16
+    set guifont=JetBrains\ Mono:h15
 
 endif
 
@@ -28,8 +28,8 @@ if has("gui_gtk")
     colorscheme vim-material
 
     " Font
-    set guifont=Fira\ Code\ 10
-    amenu Platform.Small\ Font\ Mode :set guifont=Fira\ Code\ 8<CR>
+    set guifont=JetBrains\ Mono\ 10
+    " amenu Platform.Small\ Font\ Mode :set guifont=Fira\ Code\ 8<CR>
 
 endif
 
