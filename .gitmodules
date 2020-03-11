@@ -100,3 +100,6 @@
 [submodule "bundle/vim-systemverilog"]
 	path = bundle/vim-systemverilog
 	url = https://github.com/sychen/vim-systemverilog.git
+[submodule "bundle/vim-devicons"]
+	path = bundle/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons

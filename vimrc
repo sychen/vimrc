@@ -255,6 +255,9 @@ set fileencodings=utf-8,big5,gb2312,gb18030,gbk,ucs-bom,default
 " set encoding=utf-8 (default value)
 set termencoding=utf-8      " Required in console (it's default in gtk2/macvim)
 
+" required by vim-devicons
+set encoding=UTF-8
+
 " ===================================
 " Plugins
 " ===================================
