@@ -106,3 +106,6 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter
+[submodule "bundle/singularity.lang"]
+	path = bundle/singularity.lang
+	url = https://github.com/singularityhub/singularity.lang
