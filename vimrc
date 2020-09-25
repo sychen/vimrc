@@ -11,6 +11,11 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect('bundle/{}', 'local/{}')
 call pathogen#helptags()
 
+" Package Manager: vim-plug
+if filereadable($HOME . "/.vim/plugin-list.vim")
+    source $HOME/.vim/plugin-list.vim
+endif
+
 " File-type options
 filetype on
 filetype plugin on
