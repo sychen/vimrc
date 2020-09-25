@@ -5,16 +5,16 @@
 " :profile func *
 " :profile file *
 
-" Pathogen - Vim module management
-" its settings must come before file type detection
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect('bundle/{}', 'local/{}')
-call pathogen#helptags()
-
 " Package Manager: vim-plug
 if filereadable($HOME . "/.vim/plugin-list.vim")
     source $HOME/.vim/plugin-list.vim
 endif
+
+" Pathogen - Vim module management
+" its settings must come before file type detection
+" runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect('local/{}')
+call pathogen#helptags()
 
 " File-type options
 filetype on
