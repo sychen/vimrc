@@ -41,14 +41,14 @@ Plug 'fedorenchik/AnsiEsc'
 " http://www.drchip.org/astronaut/vim/index.html#ANSIESC
 
 " ======== 2012 ========
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 " Used to use garbas/vim-snipmate.git
 " But it had many dependencies
 " * tomtom/tlib_vim
 " * MacWeber/vim-addon-mw-utils
 " So I switched to UltiSnips
 
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 " depends on SirVer/ultisnips
 
 Plug 'tpope/vim-surround'
