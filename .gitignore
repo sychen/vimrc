@@ -9,3 +9,5 @@ sessions
 # Local Settings
 vimrc-local
 local
+# Plugin Directory
+plugged
