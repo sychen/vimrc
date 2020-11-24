@@ -114,6 +114,7 @@ Plug 'sychen/vim-systemverilog'
 
 " ======== 2020 ========
 Plug 'singularityhub/singularity.lang'
+Plug 'raimon49/requirements.txt.vim'
 
 " ====================================================
 " Themes
