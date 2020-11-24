@@ -7,11 +7,17 @@ Create symlinks:
     ln -s ~/.vim/vimrc ~/.vimrc
     ln -s ~/.vim/gvimrc ~/.gvimrc
 
-Switch to the `~/.vim` directory, and fetch submodules:
+Plugin Management (using vim-plug)
 
-    cd ~/.vim
-    git submodule init
-    git submodule update
+* Edit
+
+    vim ~/.vim/plugin-list.vim
+
+* Operations (vim-plug)
+
+    :PlugInstall
+    :PlugUpdate
+    :PlugUpgrade
 
 =======================================================
 Assistant Windows
