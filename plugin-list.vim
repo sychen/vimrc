@@ -80,6 +80,9 @@ Plug 'ntpeters/vim-better-whitespace'
 " ======== 2020 ========
 Plug 'preservim/nerdcommenter'
 
+Plug 'junegunn/vim-plug'
+" for documentation
+
 " ====================================================
 " Integration
 " ====================================================
