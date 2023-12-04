@@ -129,6 +129,9 @@ set pastetoggle=<F2>    " Insert mode <--> paste mode
 
 set backup
 set backupext=.bak
+if !isdirectory(expand("~/.vim-backup"))
+    call mkdir(expand("~/.vim-backup"))
+endif
 set backupdir=~/.vim-backup
 
 set shell=/bin/sh       " Prevent from breakage if tcsh is used
