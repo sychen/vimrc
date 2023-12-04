@@ -12,7 +12,8 @@ if has("gui_macvim")
 
     set macligatures
     " set guifont=JetBrains\ Mono:h15
-    set guifont=JetBrainsMonoNerdFontComplete-Regular:h14
+    " set guifont=JetBrainsMonoNerdFontComplete-Regular:h14
+    set guifont=MonoLisaNF-Regular:h14
 
 endif
 
