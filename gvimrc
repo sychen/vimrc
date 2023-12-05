@@ -4,6 +4,7 @@
 amenu Style.Expand\ Tabs\ To\ 4\ Spaces :%s/	/    /g<CR>
 amenu Style.Strip\ Trailing\ Spaces :%s/  *$//g<CR>
 
+" Currently (2023-12-05), no need to use NERD fonts for MonoLisa.
 
 if has("gui_macvim")
 
@@ -13,7 +14,7 @@ if has("gui_macvim")
     set macligatures
     " set guifont=JetBrains\ Mono:h15
     " set guifont=JetBrainsMonoNerdFontComplete-Regular:h14
-    set guifont=MonoLisaNF-Regular:h14
+    set guifont=MonoLisa-Regular:h14
 
 endif
 
@@ -30,7 +31,9 @@ if has("gui_gtk")
     colorscheme vim-material
 
     " Font
-    set guifont=JetBrains\ Mono\ 10
+    " set guifont=JetBrains\ Mono\ 10
+    " set guifont=RobotoMono\ Nerd\ Font\ Mono\ 10
+    set guifont=Monolisa\ 10
     " amenu Platform.Small\ Font\ Mode :set guifont=Fira\ Code\ 8<CR>
 
 endif
