@@ -116,6 +116,9 @@ Plug 'sychen/vim-systemverilog'
 Plug 'singularityhub/singularity.lang'
 Plug 'raimon49/requirements.txt.vim'
 
+" ======== 2023 ========
+Plug 'OmniSharp/omnisharp-vim'
+
 " ====================================================
 " Themes
 " ====================================================
