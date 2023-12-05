@@ -188,6 +188,8 @@ autocmd! bufwritepost vimrc source ~/.vim/vimrc
 noremap <F4> :Ack <cword><CR>
 noremap <S-F4> :Ack <cword><CR>
 
+noremap <F12> :cnext<CR>
+
 " Move between windows
 " ====================
 noremap <C-j> <C-W>j
