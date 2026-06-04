@@ -176,7 +176,8 @@ nnoremap <leader>w :w!<cr>
 nnoremap <leader>e :e! ~/.vim/vimrc<cr>
 
 " When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/.vim/vimrc
+" (overwritten later, new key binding to be set)
+" autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
 
 " Grep the word under the cursor
