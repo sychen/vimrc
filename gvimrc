@@ -38,6 +38,12 @@ if has("gui_gtk")
 
 endif
 
+if has('win32') || has('win64')
+    colorscheme desert
+    set guifont=MonoLisa:h11
+endif
+
+
 " Local gvimrc settings
 " =====================
 
