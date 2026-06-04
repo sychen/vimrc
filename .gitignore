@@ -11,3 +11,6 @@ vimrc-local
 local
 # Plugin Directory
 plugged
+# Temporary files
+*.swp
+*.swo
