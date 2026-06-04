@@ -101,7 +101,8 @@ Plug 'nvie/vim-flake8'
 Plug 'tpope/vim-rails'
 
 " ======== 2015 ========
-Plug 'MaxMEllon/vim-jsx-pretty'
+" Removed because it is already in vim-polyglot
+" Plug 'MaxMEllon/vim-jsx-pretty'
 " It was mxw/vim-jsx
 " But it was incompatible with a famous plugin,
 " and this new one is the new norm.
@@ -109,12 +110,14 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'sheerun/vim-polyglot'
 
 " ======== 2017 ========
-Plug 'Glench/Vim-Jinja2-Syntax'
+" Removed because it is already in vim-polyglot
+" Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'sychen/vim-systemverilog'
 
 " ======== 2020 ========
 Plug 'singularityhub/singularity.lang'
-Plug 'raimon49/requirements.txt.vim'
+" Removed because it is already in vim-polyglot
+" Plug 'raimon49/requirements.txt.vim'
 
 " ======== 2023 ========
 Plug 'OmniSharp/omnisharp-vim'
