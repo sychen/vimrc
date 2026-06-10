@@ -173,7 +173,8 @@ nnoremap <leader>s :sp<cr>
 nnoremap <leader>w :w!<cr>
 
 " Fast editing of the .vimrc file
-nnoremap <leader>e :e! ~/.vim/vimrc<cr>
+"   (<leader>e is taken by NERDTreeToggle, so use capital E)
+nnoremap <leader>E :e! ~/.vim/vimrc<cr>
 
 " When vimrc is edited, reload it
 " (overwritten later, new key binding to be set)
