@@ -188,7 +188,7 @@ nnoremap <leader>E :e! ~/.vim/vimrc<cr>
 " noremap <S-F4> :execute "vimgrep /" . expand("<cword>") . "/j *" <Bar> cw<CR>
 
 noremap <F4> :Ack <cword><CR>
-noremap <S-F4> :Ack <cword><CR>
+noremap <S-F4> :Ack --no-recurse <cword><CR>
 
 noremap <F12> :cnext<CR>
 
