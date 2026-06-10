@@ -41,7 +41,6 @@ set listchars=tab:._,trail:!    " Highlight tabs and trailing spaces
 set list
 
 set cursorline                  " Highlight the line where the cursor is
-set t_Co=256                    " Enable 256 colors for better display
 
 " Manually set highlighting for UI elements
 "   It should be moved to the colorscheme files.
