@@ -94,9 +94,6 @@ Plug 'nvie/vim-flake8'
 " Languages
 " ====================================================
 
-" ======== 2014 ========
-Plug 'tpope/vim-rails'
-
 " ======== 2015 ========
 " Removed because it is already in vim-polyglot
 " Plug 'MaxMEllon/vim-jsx-pretty'
