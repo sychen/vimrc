@@ -31,9 +31,6 @@ Plug 'airblade/vim-gitgutter'
 " ====================================================
 
 " ======== 2011 ========
-Plug 'tpope/vim-pathogen'
-" For local plugins temporarily
-
 Plug 'fedorenchik/AnsiEsc'
 " The official mirror is at vim-scripts/AnsiEsc,
 " but the above is the most recent GitHub mirror of
@@ -135,6 +132,22 @@ Plug 'twerth/ir_black'
 
 " ======== 2020 ========
 Plug 'ryanoasis/vim-devicons'
+
+" ====================================================
+" Local Plugins
+" ====================================================
+
+" Each subdirectory of ~/.vim/local is loaded as an
+" unmanaged plugin (path-based Plug entries are never
+" installed, updated, or cleaned by vim-plug).
+" This replaces pathogen#infect('local/{}').
+for s:local_plugin in glob('~/.vim/local/*', 1, 1)
+    if isdirectory(s:local_plugin)
+        " 'execute' is needed: passing s:local_plugin directly to :Plug
+        " would resolve the s: scope inside vim-plug, not this script.
+        execute "Plug '" . s:local_plugin . "'"
+    endif
+endfor
 
 
 call plug#end()
