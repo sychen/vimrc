@@ -120,12 +120,8 @@ Plug 'OmniSharp/omnisharp-vim'
 " Themes
 " ====================================================
 
-" ======== 2014 ========
-Plug 'nanotech/jellybeans.vim'
-
 " ======== 2017 ========
 Plug 'sychen/vim-material'
-Plug 'twerth/ir_black'
 
 " ======== 2020 ========
 Plug 'ryanoasis/vim-devicons'
