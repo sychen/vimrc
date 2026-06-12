@@ -180,8 +180,17 @@ nnoremap <leader>E :e! ~/.vim/vimrc<cr>
 " noremap <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 " noremap <S-F4> :execute "vimgrep /" . expand("<cword>") . "/j *" <Bar> cw<CR>
 
+" Use ripgrep as the :Ack backend when available (much faster than ack,
+" and ack is not installed on every host).
+if executable('rg')
+    let g:ackprg = 'rg --vimgrep'
+    let s:ack_norecurse = '--max-depth=1'
+else
+    let s:ack_norecurse = '--no-recurse'
+endif
+
 noremap <F4> :Ack <cword><CR>
-noremap <S-F4> :Ack --no-recurse <cword><CR>
+execute 'noremap <S-F4> :Ack ' . s:ack_norecurse . ' <cword><CR>'
 
 noremap <F12> :cnext<CR>
 
