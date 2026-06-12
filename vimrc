@@ -276,6 +276,13 @@ set encoding=UTF-8
 " Plugins
 " ===================================
 
+" Built-in optional packages
+" ==========================
+
+" Commenting: gcc toggles a line, gc{motion} toggles a range.
+" Bundled with Vim 9.1+; replaces nerdcommenter.
+silent! packadd comment
+
 " NERDTree
 nnoremap <silent> <F5> :NERDTreeToggle<CR>
 " Also supports leader key
