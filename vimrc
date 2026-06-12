@@ -298,9 +298,14 @@ endif
 " Tagbar
 " =======
 
-if has("mac")
-    let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
-endif
+" Prefer Homebrew's Universal Ctags; /usr/bin/ctags on macOS is the old
+" BSD ctags, which Tagbar cannot use. Try Apple Silicon and Intel paths.
+for s:ctags in ['/opt/homebrew/bin/ctags', '/usr/local/bin/ctags']
+    if executable(s:ctags)
+        let g:tagbar_ctags_bin = s:ctags
+        break
+    endif
+endfor
 nnoremap <silent> <F3> :TagbarToggle<CR>
 "Also supports leader key
 nnoremap <silent> <leader>T :TagbarToggle<CR>
