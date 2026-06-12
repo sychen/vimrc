@@ -290,6 +290,10 @@ set encoding=UTF-8
 " Bundled with Vim 9.1+; replaces nerdcommenter.
 silent! packadd comment
 
+" Extended %: jump between matching keyword pairs
+" (if/endif, begin/end, HTML tags, ...)
+silent! packadd matchit
+
 " NERDTree
 nnoremap <silent> <F5> :NERDTreeToggle<CR>
 " Also supports leader key
@@ -358,11 +362,6 @@ highlight GitGutterAdd          guifg=lightgreen guibg=black
 highlight GitGutterChange       guifg=lightyellow guibg=black
 highlight GitGutterDelete       guifg=lightred guibg=black
 highlight GitGutterChangeDelete guifg=lightblue guibg=black
-
-" Matchit
-" =======
-
-" source $VIMRUNTIME/macros/matchit.vim
 
 " Ack
 " ===
