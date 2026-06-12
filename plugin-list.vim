@@ -71,7 +71,6 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'gerw/vim-HiLinkTrace'
 
 " ======== 2017 ========
-Plug 'Yggdroot/indentLine'
 Plug 'ntpeters/vim-better-whitespace'
 
 " ======== 2020 ========

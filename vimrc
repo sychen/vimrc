@@ -51,6 +51,13 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 
+" Indent guides: draw a thin bar at each indent level on the leading
+" whitespace (replaces the indentLine plugin and its conceal hacks).
+" 'leadmultispace' in 'listchars' requires patch 8.2.5066.
+if has('patch-8.2.5066')
+    let &listchars .= ',leadmultispace:¦' . repeat(' ', &shiftwidth - 1)
+endif
+
 " Option 'softtabstop' emulates shorter tabs by inserting spaces.
 " For example: softtabstop=4
 " 1 tab  => ____
