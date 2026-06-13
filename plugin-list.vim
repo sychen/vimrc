@@ -95,6 +95,11 @@ Plug 'dense-analysis/ale'
 " Replaces vim-flake8: lints asynchronously while editing,
 " using ruff for Python.
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" LSP client: completion, go-to-definition, rename, hover docs.
+" Language servers are managed as coc extensions, declared in
+" g:coc_global_extensions in the vimrc.
+
 " ====================================================
 " Languages
 " ====================================================

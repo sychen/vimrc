@@ -378,6 +378,59 @@ let g:ale_linters_explicit = 1
 let g:ale_linters = {
 \   'python': ['ruff'],
 \ }
+" coc.nvim owns the LSP features; keep ALE to CLI linters only.
+let g:ale_disable_lsp = 1
+
+" coc.nvim
+" ========
+
+" Language servers, auto-installed on first start:
+"   coc-pyright: Python type checking and IntelliSense
+"   coc-clangd:  C/C++ (uses the clangd from Xcode CLT)
+let g:coc_global_extensions = ['coc-pyright', 'coc-clangd']
+
+set updatetime=300      " Faster CursorHold so hover/highlights feel live
+set signcolumn=yes      " Keep the sign column open; no text shifting
+
+" Completion: Tab/S-Tab walk the menu, Enter confirms,
+" Ctrl-Space triggers it manually
+inoremap <silent><expr> <TAB>
+    \ coc#pum#visible() ? coc#pum#next(1) :
+    \ <SID>CheckBackspace() ? "\<Tab>" :
+    \ coc#refresh()
+inoremap <expr> <S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+    \ : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <c-@> coc#refresh()
+
+function! s:CheckBackspace() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Diagnostics navigation
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Code navigation
+" (gd/gr shadow the built-in local-declaration search and virtual
+" replace; the built-in gi is kept, so no <Plug>(coc-implementation))
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gr <Plug>(coc-references)
+
+" K shows hover documentation, falling back to the regular keywordprg
+nnoremap <silent> K :call <SID>ShowDocumentation()<CR>
+function! s:ShowDocumentation()
+    if CocAction('hasProvider', 'hover')
+        call CocActionAsync('doHover')
+    else
+        call feedkeys('K', 'in')
+    endif
+endfunction
+
+" Rename symbol across the project
+nmap <leader>rn <Plug>(coc-rename)
 
 " EasyAlign
 
