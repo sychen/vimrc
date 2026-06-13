@@ -368,6 +368,17 @@ highlight GitGutterChangeDelete guifg=lightblue guibg=black
 let g:ackhighlight = 1
 " let g:ack_autofold_results = 1
 
+" ALE
+" ===
+
+" Asynchronous lint-as-you-type (replaces vim-flake8).
+" Run only the linters listed here, never everything ALE
+" happens to find on the system.
+let g:ale_linters_explicit = 1
+let g:ale_linters = {
+\   'python': ['ruff'],
+\ }
+
 " EasyAlign
 
 xmap ga <Plug>(EasyAlign)

@@ -90,8 +90,10 @@ Plug 'tpope/vim-obsession'
 " ======== 2014 ========
 Plug 'mileszs/ack.vim'
 
-" ======== 2017 ========
-Plug 'nvie/vim-flake8'
+" ======== 2026 ========
+Plug 'dense-analysis/ale'
+" Replaces vim-flake8: lints asynchronously while editing,
+" using ruff for Python.
 
 " ====================================================
 " Languages
