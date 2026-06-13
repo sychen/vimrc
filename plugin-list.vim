@@ -48,7 +48,6 @@ Plug 'fedorenchik/AnsiEsc'
 " depends on SirVer/ultisnips
 
 Plug 'tpope/vim-surround'
-Plug 'vim-scripts/sessionman.vim'
 Plug 'sychen/vim-localrc'
 
 " ======== 2013 ========
@@ -79,6 +78,10 @@ Plug 'junegunn/fzf.vim'
 " Replaces ctrlp.vim (:Files) and vim-buffergator (:Buffers).
 " The 'do' hook downloads the fzf binary on hosts where it
 " is not already installed.
+
+Plug 'tpope/vim-obsession'
+" Replaces sessionman.vim: ":Obsess" starts a self-updating
+" session; resume with "vim -S Session.vim".
 
 " ====================================================
 " Integration
