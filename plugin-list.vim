@@ -21,7 +21,6 @@ Plug 'preservim/tagbar'
 
 " ======== 2013 ========
 Plug 'bling/vim-airline'
-Plug 'jeetsukumaran/vim-buffergator'
 
 " ======== 2014 ========
 Plug 'airblade/vim-gitgutter'
@@ -58,9 +57,6 @@ Plug 'bronson/vim-visual-star-search'
 " a fork from bronson/vim-visual-star-search.
 " But the bronson's is more maintained.
 
-Plug 'ctrlpvim/ctrlp.vim'
-" It was kien/ctrp.vim, and is later ctrlpvim/ctrlp
-
 Plug 'mbbill/fencview'
 Plug 'junegunn/vim-easy-align'
 
@@ -76,6 +72,13 @@ Plug 'ntpeters/vim-better-whitespace'
 " ======== 2020 ========
 Plug 'junegunn/vim-plug'
 " for documentation
+
+" ======== 2026 ========
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" Replaces ctrlp.vim (:Files) and vim-buffergator (:Buffers).
+" The 'do' hook downloads the fzf binary on hosts where it
+" is not already installed.
 
 " ====================================================
 " Integration

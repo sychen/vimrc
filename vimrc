@@ -345,14 +345,13 @@ let g:tagbar_type_diff = {
     \       ]
     \ }
 
-" Buffergator
-" ===========
+" fzf
+" ===
 
-" Disable default key mapping
-let g:buffergator_suppress_keymaps = 1
-" Selected key mapping
-nnoremap <silent> <Leader>b :BuffergatorOpen<CR>
-nnoremap <silent> <Leader>t :BuffergatorTabsOpen<CR>
+" Fuzzy pickers (replaces ctrlp.vim and vim-buffergator)
+nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <Leader>t :Windows<CR>
 
 " Git Gutter
 " ==========
