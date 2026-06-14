@@ -4,7 +4,8 @@
 amenu Style.Expand\ Tabs\ To\ 4\ Spaces :%s/	/    /g<CR>
 amenu Style.Strip\ Trailing\ Spaces :%s/  *$//g<CR>
 
-" Currently (2023-12-05), no need to use NERD fonts for MonoLisa.
+" The default font is MonoLisa, with fallback Fira Code.
+" The Nerd Font version is used to use vim-devicon.
 
 if has("gui_macvim")
 
@@ -12,9 +13,9 @@ if has("gui_macvim")
     set background=dark
 
     set macligatures
-    " set guifont=JetBrains\ Mono:h15
-    " set guifont=JetBrainsMonoNerdFontComplete-Regular:h14
-    set guifont=MonoLisa-Regular:h14
+
+    set guifont=MonoLisaNF-Regular:h14,FiraCodeNFM-Reg:h14
+    set guifontwide=jf-jinxuanlatte-3.0-Regular:h14
 
 endif
 
