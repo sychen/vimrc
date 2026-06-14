@@ -4,13 +4,19 @@
 amenu Style.Expand\ Tabs\ To\ 4\ Spaces :%s/	/    /g<CR>
 amenu Style.Strip\ Trailing\ Spaces :%s/  *$//g<CR>
 
+" Color scheme: material everywhere, with desert as a fallback when
+" material is not installed.
+set background=dark
+try
+    colorscheme material
+catch /^Vim\%((\a\+)\)\=:E185:/ " E185: colorscheme not found
+    colorscheme desert
+endtry
+
 " The default font is MonoLisa, with fallback Fira Code.
 " The Nerd Font version is used to use vim-devicon.
 
 if has("gui_macvim")
-
-    colorscheme material
-    set background=dark
 
     set macligatures
 
@@ -27,10 +33,6 @@ if has("gui_gtk")
     set guioptions-=T " Do not include toolbar
     set guioptions+=b " Bottom (horizontal) scrollbar is present
 
-    " Color scheme
-    set background=dark
-    colorscheme material
-
     " Font
     " set guifont=JetBrains\ Mono\ 10
     " set guifont=RobotoMono\ Nerd\ Font\ Mono\ 10
@@ -40,7 +42,6 @@ if has("gui_gtk")
 endif
 
 if has('win32') || has('win64')
-    colorscheme desert
     set guifont=MonoLisa:h11
 endif
 
