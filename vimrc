@@ -45,6 +45,41 @@ highlight search        ctermfg=Black ctermbg=Yellow gui=bold guifg=Black guibg=
 highlight tabline       ctermfg=black ctermbg=gray
 highlight tablinesel    ctermfg=white ctermbg=black
 
+" "Special" syntax groups: bold variants of stock groups
+"   Some syntax files highlight framework-provided identifiers with
+"   SpecialConstant / SpecialIdentifier / SpecialMacro so they stand out
+"   from locally-defined names. Rather than patching every colorscheme to
+"   define these groups (see vim-material commit 66a81d8), derive them here
+"   from the stock groups they shadow: same colour, plus bold. Driven by the
+"   ColorScheme event so it re-applies on top of whatever theme is loaded.
+function! s:HiBoldFrom(name, base) abort
+    let l:id = synIDtrans(hlID(a:base))
+    let l:guifg   = synIDattr(l:id, 'fg#', 'gui')
+    let l:ctermfg = synIDattr(l:id, 'fg',  'cterm')
+    let l:cmd = 'highlight ' . a:name . ' gui=bold cterm=bold term=bold'
+    if !empty(l:guifg)
+        let l:cmd .= ' guifg=' . l:guifg
+    endif
+    if !empty(l:ctermfg)
+        let l:cmd .= ' ctermfg=' . l:ctermfg
+    endif
+    execute l:cmd
+endfunction
+
+function! s:SpecialBoldGroups() abort
+    call s:HiBoldFrom('SpecialConstant',   'Constant')
+    call s:HiBoldFrom('SpecialIdentifier', 'Identifier')
+    call s:HiBoldFrom('SpecialMacro',      'PreProc')
+endfunction
+
+augroup SpecialBoldGroups
+    autocmd!
+    autocmd ColorScheme * call s:SpecialBoldGroups()
+augroup END
+" Apply once now in case a colorscheme is already active (e.g. terminal Vim
+" with no later ColorScheme event).
+call s:SpecialBoldGroups()
+
 " Tab, indent, and wrapping
 " 4 spaces wide and auto tab->space
 set shiftwidth=4
