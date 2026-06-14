@@ -131,7 +131,7 @@ Plug 'OmniSharp/omnisharp-vim'
 " ====================================================
 
 " ======== 2017 ========
-Plug 'sychen/vim-material'
+Plug 'kaicataldo/material.vim'
 
 " ======== 2020 ========
 Plug 'ryanoasis/vim-devicons'

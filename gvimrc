@@ -8,7 +8,7 @@ amenu Style.Strip\ Trailing\ Spaces :%s/  *$//g<CR>
 
 if has("gui_macvim")
 
-    colorscheme vim-material
+    colorscheme material
     set background=dark
 
     set macligatures
@@ -28,7 +28,7 @@ if has("gui_gtk")
 
     " Color scheme
     set background=dark
-    colorscheme vim-material
+    colorscheme material
 
     " Font
     " set guifont=JetBrains\ Mono\ 10
