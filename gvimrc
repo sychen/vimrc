@@ -38,7 +38,12 @@ if has("gui_gtk")
     " so it must be edited manually
     set guifont=Monolisa\ Nerd\ Font\ 10
     " set guifont=FiraCode\ Nerd\ Font\ 10
+
     " If you use FiraCode, enable below as well
+    " let g:airline_symbols = get(g:, 'airline_symbols', {})
+    " let g:airline_symbols.linenr = "\ue0a1"
+
+    " The following is too late to update the dictionary and does not work
     " let g:airline_powerline_fonts = 1
 
     " amenu Platform.Small\ Font\ Mode :set guifont=Fira\ Code\ 8<CR>
