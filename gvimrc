@@ -34,15 +34,13 @@ if has("gui_gtk")
     set guioptions+=b " Bottom (horizontal) scrollbar is present
 
     " Font
-    " set guifont=JetBrains\ Mono\ 10
-    " set guifont=RobotoMono\ Nerd\ Font\ Mono\ 10
-    set guifont=Monolisa\ 10
+    set guifont=Monolisa\ Nerd\ Font\ 10,Fira\ Code\ Nerd\ Font\ 10
     " amenu Platform.Small\ Font\ Mode :set guifont=Fira\ Code\ 8<CR>
 
 endif
 
 if has('win32') || has('win64')
-    set guifont=MonoLisa:h11
+    set guifont=MonoLisa_Nerd_Font:h11,FiraCode_Nerd_Font_Mono:h11
 endif
 
 
