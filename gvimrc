@@ -34,7 +34,10 @@ if has("gui_gtk")
     set guioptions+=b " Bottom (horizontal) scrollbar is present
 
     " Font
-    set guifont=Monolisa\ Nerd\ Font\ 10,Fira\ Code\ Nerd\ Font\ 10
+    " The fallback mechanism isn't that correct on gvim-gtk3,
+    " so it must be edited manually
+    set guifont=Monolisa\ Nerd\ Font\ 10
+    " set guifont=FiraCode\ Nerd\ Font\ 10
     " amenu Platform.Small\ Font\ Mode :set guifont=Fira\ Code\ 8<CR>
 
 endif
