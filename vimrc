@@ -353,7 +353,8 @@ endif
 
 " Prefer Homebrew's Universal Ctags; /usr/bin/ctags on macOS is the old
 " BSD ctags, which Tagbar cannot use. Try Apple Silicon and Intel paths.
-for s:ctags in ['/opt/homebrew/bin/ctags', '/usr/local/bin/ctags']
+" Ubuntu: it is at /usr/bin/ctags
+for s:ctags in ['/opt/homebrew/bin/ctags', '/usr/local/bin/ctags', '/usr/bin/ctags']
     if executable(s:ctags)
         let g:tagbar_ctags_bin = s:ctags
         break
