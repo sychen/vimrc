@@ -36,7 +36,7 @@ if has("gui_gtk")
     " Font
     " The fallback mechanism isn't that correct on gvim-gtk3,
     " so it must be edited manually
-    set guifont=Monolisa\ Nerd\ Font\ 10
+    set guifont=MonoLisaCode\ 10
     " set guifont=FiraCode\ Nerd\ Font\ 10
 
     " If you use FiraCode, enable below as well
@@ -51,7 +51,7 @@ if has("gui_gtk")
 endif
 
 if has('win32') || has('win64')
-    set guifont=MonoLisa_Nerd_Font:h11,FiraCode_Nerd_Font_Mono:h11
+    set guifont=MonoLisaCode:h11,FiraCode_Nerd_Font_Mono:h11,Symbols_Nerd_Font_Mono:h11
 endif
 
 
