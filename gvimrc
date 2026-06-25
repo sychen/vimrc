@@ -20,7 +20,11 @@ if has("gui_macvim")
 
     set macligatures
 
-    set guifont=MonoLisaNF-Regular:h14,FiraCodeNFM-Reg:h14
+    " MacVim does not use fallback fonts
+    " 1. We can not provide Symbols Nerd Font Mono as fallback
+    " 2. We must provide Fira Code as another line
+    set guifont=MonoLisaCodeNFM-Regular:h14
+    " set guifont=FiraCodeNFM-Reg:h14
     set guifontwide=jf-jinxuanlatte-3.0-Regular:h14
 
 endif
