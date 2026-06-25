@@ -162,12 +162,31 @@ set smartcase           " Smarter search
 set ignorecase
 set pastetoggle=<F2>    " Insert mode <--> paste mode
 
+" For backupdir, directory (swap files), undodir
+" place it outside ~/.vim and under ~/.config
+" NOTE: we use let instead of set as set does not accept a variable
+
 set backup
 set backupext=.bak
-if !isdirectory(expand("~/.vim-backup"))
-    call mkdir(expand("~/.vim-backup"))
+
+let s:backupdir = expand("~/.config/vim-backup")
+if !isdirectory(s:backupdir)
+    call mkdir(s:backupdir, 'p')  "p: mkdir -p
 endif
-set backupdir=~/.vim-backup
+let &backupdir = s:backupdir
+
+let s:directory = expand("~/.config/vim-swap")
+if !isdirectory(s:directory)
+    call mkdir(s:directory, 'p')  "p: mkdir -p
+endif
+let &directory = s:directory
+
+let s:undodir = expand("~/.config/vim-undo")
+if !isdirectory(s:undodir)
+    call mkdir(s:undodir, 'p')  "p: mkdir -p
+endif
+let &undodir = s:undodir
+
 
 set shell=/bin/sh       " Prevent from breakage if tcsh is used
 
