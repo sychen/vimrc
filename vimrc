@@ -164,26 +164,30 @@ set pastetoggle=<F2>    " Insert mode <--> paste mode
 
 " For backupdir, directory (swap files), undodir
 " place it outside ~/.vim and under ~/.config
-" NOTE: we use let instead of set as set does not accept a variable
+" NOTE:
+" 1. Use p in mkdir as mkdir -p
+" 2. "set <option>" does not accept a variable.  Use let instead.
 
 set backup
 set backupext=.bak
 
 let s:backupdir = expand("~/.config/vim-backup")
 if !isdirectory(s:backupdir)
-    call mkdir(s:backupdir, 'p')  "p: mkdir -p
+    call mkdir(s:backupdir, 'p')
 endif
 let &backupdir = s:backupdir
 
 let s:directory = expand("~/.config/vim-swap")
 if !isdirectory(s:directory)
-    call mkdir(s:directory, 'p')  "p: mkdir -p
+    call mkdir(s:directory, 'p')
 endif
-let &directory = s:directory
+" NOTE: to avoid name collision, append //
+" to tell vim to use the full path with %s,/,%,g
+let &directory = s:directory . '//'
 
 let s:undodir = expand("~/.config/vim-undo")
 if !isdirectory(s:undodir)
-    call mkdir(s:undodir, 'p')  "p: mkdir -p
+    call mkdir(s:undodir, 'p')
 endif
 let &undodir = s:undodir
 
